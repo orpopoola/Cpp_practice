@@ -1,0 +1,20 @@
+To determine the operation of the circuitry, the developed circuit was tested. The test was used to observe the output from the camera as recorded on the Arduino through UART Serial port. 
+
+By writing a blob tracking program on the Arduino, the outputs are measured as presented in Fig. 7. Fig. 7 shows that the selected components and the circuit connections works well with the Wiimote camera as made evident by blob tracking data. 
+
+The update rate from the serial port was also adequate for tracking. 
+
+According to tests, the update rate of the camera was about 23 frames per seconds (fps). 
+
+
+ I am adding a new line. 
+
+ I am adding another new line 
+
+ I am adding a new line. 
+
+ I am adding another new line 
+
+ I am adding a new line. 
+
+ I am adding another new line 
