@@ -32,5 +32,9 @@ int main(){
     // TODO: instantiate and output a bank account    
   BankAccount ba;
   ba.sBalance(100);
-  std::cout << ba.gBalance() << std::endl;    
+  ba.sOwner_name("John Doe");
+  ba.sAc_num(1122);
+  std::cout << "Account Balance is: \t"<< ba.gBalance() << std::endl;    
+  std::cout << "Owner Name is: \t\t"<< ba.gOwner_name() << std::endl; 
+  std::cout << "Account Number is: \t"<< ba.gAc_num() << std::endl; 
 }
