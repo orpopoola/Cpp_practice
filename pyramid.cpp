@@ -16,7 +16,7 @@ class Pyramid{
     float SurfaceArea;
 
     public:
-    Pyramid(int len, int wid, int hei):length(len), width(wid), height(hei){};
+    Pyramid(int len, int wid, int hei):length(len), width(wid), height(hei){(len<0||wid<0||hei<0)?throw std::invalid_argument("Inappropriate value"): 1;};
     //setters
     void sLength(int len);
     void sWidth(int wid);
