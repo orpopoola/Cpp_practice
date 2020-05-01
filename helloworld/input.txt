@@ -18,3 +18,7 @@ According to tests, the update rate of the camera was about 23 frames per second
  I am adding a new line. 
 
  I am adding another new line 
+
+ I am adding a new line. 
+
+ I am adding another new line 
