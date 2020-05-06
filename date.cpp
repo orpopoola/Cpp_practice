@@ -1,6 +1,8 @@
+
 #include <cassert>
 #include <string>
 #include <vector>
+#include <iostream>
 
 class Date {
  public:
@@ -57,6 +59,28 @@ void Date::Month(int month) {
 
 void Date::Year(int year) {
   year_ = year;
+}
+
+std::string Date::String() const{
+    std::string month_name;
+    std::string day_name;
+    switch(month_){
+        case 1: month_name = "January"; break;
+        case 2: month_name = "February"; break;
+        case 3: month_name = "March"; break;
+        case 4: month_name = "April"; break;
+        case 5: month_name = "May"; break;
+        case 6: month_name = "June"; break;
+        case 7: month_name = "July"; break;
+        case 8: month_name = "August"; break;
+        case 9: month_name = "September"; break;
+        case 10: month_name = "October"; break;
+        case 11: month_name = "November"; break;
+        case 12: month_name = "December"; break;
+    }
+    day_name = month_name+" "+std::to_string(day_)+", "+std::to_string(year_);
+    std::cout<<day_name<<"\n";
+    return day_name;
 }
 
 // Test
