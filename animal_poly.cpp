@@ -7,12 +7,11 @@ public:
 };
 
 // TODO: Declare a class Dog that inherits from Animal
-class Dog {
+class Dog: public Animal {
     public:
-    std::string Talk() const {
-        return "Woof";
-    }
+    std::string Talk() const ;
 };
+std::string Dog::Talk() const{return "Woof";}
 
 int main() {
   Dog dog;
