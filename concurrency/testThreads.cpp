@@ -20,4 +20,7 @@ int main(){
     });
 
     return 0;
+    //run this program with
+    //g++ testThreads.cpp -std=c++17 -pthread
+
 }
