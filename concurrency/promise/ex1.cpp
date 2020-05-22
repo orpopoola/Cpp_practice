@@ -1,29 +1,23 @@
-#include <iostream>
 #include <thread>
+#include <iostream>
 
-void printMessage(std::string message)
+void printMsg(std::string msg)
 {
-    std::this_thread::sleep_for(std::chrono::milliseconds(10)); // simulate work
-    std::cout << "Thread 1: " << message << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(7));
+    std::cout<<"Thread 1: "<<msg<<std::endl;
 }
 
 int main()
 {
-    // define message
-    std::string message = "My Message";
-
-    // start thread using variadic templates
-    std::thread t1(printMessage, message);
-
-    // start thread using a Lambda
-    std::thread t2([message] {
-        std::this_thread::sleep_for(std::chrono::milliseconds(10)); // simulate work
-        std::cout << "Thread 2: " << message << std::endl;
+    std::string mesg = "My Message";
+    std::thread t1(printMsg, mesg);//parse by variate function
+    std::thread t2([mesg]
+    {
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        std::cout<<"Thread 2: "<<mesg<<std::endl;
     });
 
-    // thread barrier
     t1.join();
     t2.join();
-
     return 0;
 }
